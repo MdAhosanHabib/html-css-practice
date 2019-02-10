@@ -1,0 +1,433 @@
+
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" xsl="http://www.w3.org/1999/XSL/Transform xmlns:fb="http://www.facebook.com/2008/fbml""><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" xsl="http://www.w3.org/1999/XSL/Transform xmlns:fb="http://www.facebook.com/2008/fbml""> <![endif]--><!--[if IE 8]><html class="no-js lt-ie9" xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fb="http://www.facebook.com/2008/fbml"><![endif]--><!--[if gt IE 8]><!--><html class="no-js" xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:scr="urn:scr.this"><!--<![endif]--><head><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="google-site-verification" content="3MyXQJRZMqPn9EZq3kubGogDMmmB9IrVgBxgMnM6dvw" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Differentiating Between Baseband and Broadband Signaling | Network+ Exam Prep: Ethernet Networking Standards | Pearson IT Certification</title><link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css" /><link rel="shortcut icon" href="/display/PearsonITCertification/images/objects/favicon.ico?v=20141110" /><link href="/display/PearsonITCertification/css/style-blessed1.css" rel="stylesheet" type="text/css" xmlns:msxsl="urn:schemas-microsoft-com:xslt" /><link href="/display/PearsonITCertification/css/style.css" rel="stylesheet" type="text/css" xmlns:msxsl="urn:schemas-microsoft-com:xslt" /><link href="/display/common/css/print.css" rel="stylesheet" media="print" type="text/css" xmlns:msxsl="urn:schemas-microsoft-com:xslt" /><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/display/PearsonITCertification/images/objects/touch_icons/apple-touch-icon-144x144-precomposed.png" xmlns:msxsl="urn:schemas-microsoft-com:xslt" /><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/display/PearsonITCertification/images/objects/touch_icons/apple-touch-icon-114x114-precomposed.png" xmlns:msxsl="urn:schemas-microsoft-com:xslt" /><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/display/PearsonITCertification/images/objects/touch_icons/apple-touch-icon-72x72-precomposed.png" xmlns:msxsl="urn:schemas-microsoft-com:xslt" /><link rel="apple-touch-icon-precomposed" href="/display/PearsonITCertification/images/objects/touch_icons/apple-touch-icon-precomposed.png" xmlns:msxsl="urn:schemas-microsoft-com:xslt" /><script language="JavaScript" src="/display/common/javascript/AdobeAnalyticsScript.js" type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><script src="//assets.adobedtm.com/cb849396793dda3fc498b86555fddd5a2d245f6c/satelliteLib-6d2c01a6145b7820bff529d931202d42b58a7cc9.js" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><script type="text/javascript" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      var arr = window.location.pathname.split('/');
+      var host = window.location.host;
+      var siteId = '';
+      
+      if(host.indexOf('informit') != -1) {
+        siteId = 'InformIT';
+      }
+      else if(host.indexOf('peachpit') != -1) {
+        siteId = 'Peachpit';
+      }
+      else if(host.indexOf('que') != -1) {
+        siteId = 'Que';
+      }
+      else if(host.indexOf('certification') != -1) {
+        siteId = 'PITC';
+      }
+      
+      var digitalData = {
+                          version: "1.0",
+                          site: {
+                                  siteId: siteId,
+                                  siteLabel: "Pearson IT Certification",
+                                  domain: location.host,
+                                  siteSection: arr[1]
+                                },
+                        page:{
+                              pageInfo:{
+                                        pageName: ':' + arr[1],
+                                        pageTitle:document.title,
+                                        pageURL:window.location.pathname + window.location.search + window.location.hash
+                                      }
+                             }
+                        };
+      
+      if(arr[1].indexOf('.asp') != -1 || arr[1].indexOf('.aspx') != -1) {
+      var splitPageData = arr[1].split('.');
+      digitalData["site"]["siteSection"]='';
+      digitalData["page"]["pageInfo"]["pageName"]=':' + splitPageData[0];
+      }
+                        
+      if(CheckFormPage() == true) {
+        digitalData["page"] = {
+                            pageInfo:{
+                                      formName:" ",
+                                      pageURL:window.location.pathname + window.location.search + window.location.hash,
+                                      
+                                      siteSection: arr[1] 
+                                    }
+                            };
+      }
+    </script><script language="JavaScript" src="/display/common/javascript/modernizr.custom.js?v=20141110" type="text/javascript" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><script language="JavaScript" src="/display/common/javascript/jquery.js?v=20141110" type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><script language="JavaScript" src="/display/common/javascript/global.js?v=20141110" type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><!--[if lte IE 8]><script language="JavaScript" src="/display/common/javascript/respond.min.js" type="text/JavaScript"></script><![endif]--><script language="JavaScript" src="/display/common/javascript/swfobject.js" type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><script language="JavaScript" src="/display/common/javascript/jquery-ui-1.10.2.custom.min.js" type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><script language="JavaScript" src="/display/common/javascript/fastclick.min.js" type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt"></script><link rel="canonical" href="http://www.pearsonitcertification.com/articles/article.aspx?p=1358404&seqNum=3" />
+            <link rel="prev" href="http://www.pearsonitcertification.com/articles/article.aspx?p=1358404&seqNum=2" />
+            <link rel="next" href="http://www.pearsonitcertification.com/articles/article.aspx?p=1358404&seqNum=4" />
+        
+                <meta name="pageType" content="Articles and Sample Chapters" />
+            <meta name="publishedDate" content="Jul 28, 2009" />
+                <meta name="description" content="This sample chapter focuses on the 802.3 ethernet networking standards to help you prepare for the CompTIA Network+ exam." />
+            
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+            
+        <script xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+          (function(d){
+            var e=d.createElement('script');
+            e.src='https://td.yieldify.com/yieldify/code.js?w_uuid=9c9c8879-695a-4fb8-b7e8-83109e6ab87f&k=1&loca='+window.location.href;
+            e.async=true;
+            d.getElementsByTagName('head')[0].appendChild(e);
+          }(document));
+      </script><script xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      (function() {
+          var _fbq = window._fbq || (window._fbq = []);
+          if (!_fbq.loaded) {
+              var fbds = document.createElement('script');
+              fbds.async = true;
+              fbds.src = '//connect.facebook.net/en_US/fbds.js';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(fbds, s);
+              _fbq.loaded = true;
+          }
+          _fbq.push(['addPixelId', '730048657068506']);
+      })();
+      
+      window._fbq = window._fbq || [];
+      window._fbq.push(['track', 'PixelInitialized', {}]);
+    </script><noscript xmlns:msxsl="urn:schemas-microsoft-com:xslt"><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=730048657068506&amp;ev=PixelInitialized" /></noscript></head><body class="r"><div class="wrapper">
+
+<div id="rContent" class="articleProduct content clearfix">
+<p class="crumb">
+            <a href="/">Home</a>
+            &gt;
+            <a href="/articles/index.aspx">Articles</a>
+            &gt;
+            <a href="/articles/index.aspx?st=87612">CompTIA</a>
+            &gt;
+            <a href="/articles/index.aspx?st=87614">Network+</a>
+</p>
+    <div id="columnOne" class="ten columns alpha rFull">
+        <div id="articleContent" class="clearfix">
+            <div id="articleHeader" class="clearfix">
+                    <h1><a href="/articles/article.aspx?p=1358404">Network+ Exam Prep: Ethernet Networking Standards</a></h1>
+                                <ul class="list-article-author">
+                        <li class="authorName"> By <a rel="author" href="/authors/bio/ba4e48e2-812f-46d5-a9e2-bf136f2bf699">Mike Harwood</a></li>
+                    <li>Jul 28, 2009</li>
+                </ul>
+            </div>
+            <div class="articleTools clearfix box">
+                    <div id="articleTOC">
+                        <p>
+                            <a href="#" class="TOC"><span class="ss-icon">&#x1F4C4;</span> <span class="linkText">Contents</span></a>
+                        </p>
+                        <div id="articleTOCList" class="TOCcontent">
+                            <a class="tocClose ss-icon" href="#">&#x2421;</a>                        
+                            <ol>
+                                            <li>
+                                                <a href="/articles/article.aspx?p=1358404">Introduction</a>
+                                            </li>
+                                            <li>
+                                                <a href="/articles/article.aspx?p=1358404&amp;seqNum=2">Characteristics Specified in the IEEE 802 Standards</a>
+                                            </li>
+                                            <li class="currentPageInfo">
+                                                Differentiating Between Baseband and Broadband Signaling
+                                            </li>
+                                            <li>
+                                                <a href="/articles/article.aspx?p=1358404&amp;seqNum=4">802.3 Ethernet Standards</a>
+                                            </li>
+                                            <li>
+                                                <a href="/articles/article.aspx?p=1358404&amp;seqNum=5">Summary</a>
+                                            </li>
+                                            <li>
+                                                <a href="/articles/article.aspx?p=1358404&amp;seqNum=6">Apply Your Knowledge</a>
+                                            </li>
+                            </ol>                            
+                        </div>
+                    </div>
+                <div class="articleInteraction">
+                    <ul>
+                        <li>
+                            <a href="/articles/printerfriendly/1358404" title="Print"><span class="ss-icon">&#x2399;</span> <span class="linkText">Print</span></a>
+                        </li>
+                        <li>
+
+<script type="text/javascript">
+    addthis_pub = 'informit';
+    addthis_logo = 'http://www.pearsonitcertification.com/display/pearsonitcertification/images/header/certification.png';
+    addthis_logo_background = 'FFFFFF';
+    addthis_logo_color = 'FFFFFF';
+    addthis_brand = 'Pearson IT Cert';
+    addthis_options = 'email, delicious, digg, facebook, google, newsvine, reddit, slashdot, stumbleupon, technorati, twitter, more';
+</script>
+<a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><span class="ss-icon">&#x002B;</span> <span class="linkText">Share This</span></a>
+<script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js"></script>
+                        </li>
+                    </ul>
+                </div>
+                    <div class="pagination">
+            <a class="paginationPrevious" href="/articles/article.aspx?p=1358404&amp;seqNum=2">&lt;<span class="pagination-nodisplay"> Back</span></a>
+        <span class="paginationLocation"><span class="pagination-bold">Page 3</span><span class="pagination-nodisplay"> of 6</span></span>
+            <a class="paginationNext" href="/articles/article.aspx?p=1358404&amp;seqNum=4"><span class="pagination-nodisplay">Next </span>&gt;</a>
+    </div>
+                
+            </div> <!-- end articletools -->
+            <div id="articleText">
+
+                    <a class="relatedBookLink" href="#">This chapter is from the book <span class="ss-icon">&#xF500;</span></a>
+                    <div class="relatedBook relatedBookWide">
+                        <div class="header">
+                            <h3>This chapter is from the book</h3>
+                        </div>
+                        <div class="productArea clearfix">
+                            <a href="/store/comptia-network-plus-n10-004-exam-prep-9780789737953?w_ptgrevartcl=Network%2b+Exam+Prep%3a+Ethernet+Networking+Standards_1358404"><img src="/ShowCover.aspx?isbn=9780789737953&amp;type=d" alt="CompTIA Network+ N10-004 Exam Prep, 3rd Edition" class="product" /></a><a href="/store/comptia-network-plus-n10-004-exam-prep-9780789737953?w_ptgrevartcl=Network%2b+Exam+Prep%3a+Ethernet+Networking+Standards_1358404" class="title">CompTIA Network+ N10-004 Exam Prep, 3rd Edition</a>
+                            <br />
+                            <br />
+                            <a href="/store/comptia-network-plus-n10-004-exam-prep-9780789737953?w_ptgrevartcl=Network%2b+Exam+Prep%3a+Ethernet+Networking+Standards_1358404" class="button">Learn More</a>
+                                <a href="/buy.aspx?isbn=9780789737953&w_ptgrevartcl=Network%2b+Exam+Prep%3a+Ethernet+Networking+Standards_1358404" class="buy button"><span class="ss-icon">&#xE500;</span>Buy</a>
+                        </div>
+                    </div>
+                    <div class="relatedBook slide">
+                        <div class="header graydient">
+                            <h3 class="relatedHide">This chapter is from the book</h3>
+                            <h3 class="relatedShow"><a href="#" class="mobileClose">This chapter is from the book <span class="ss-icon">&#xF501;</span></a></h3>
+                        </div>
+                        <div class="productArea graydient clearfix">
+                            <a href="/store/comptia-network-plus-n10-004-exam-prep-9780789737953?w_ptgrevartcl=Network%2b+Exam+Prep%3a+Ethernet+Networking+Standards_1358404"><img src="/ShowCover.aspx?isbn=9780789737953&amp;type=d" alt="CompTIA Network+ N10-004 Exam Prep, 3rd Edition" class="product" /></a><a href="/store/comptia-network-plus-n10-004-exam-prep-9780789737953?w_ptgrevartcl=Network%2b+Exam+Prep%3a+Ethernet+Networking+Standards_1358404" class="title">CompTIA Network+ N10-004 Exam Prep, 3rd Edition</a>
+                            <br />
+                            <br />
+                            <a href="/store/comptia-network-plus-n10-004-exam-prep-9780789737953?w_ptgrevartcl=Network%2b+Exam+Prep%3a+Ethernet+Networking+Standards_1358404" class="button">Learn More</a>
+                                <a href="/buy.aspx?isbn=9780789737953&w_ptgrevartcl=Network%2b+Exam+Prep%3a+Ethernet+Networking+Standards_1358404" class="buy button"><span class="ss-icon">&#xE500;</span>Buy</a>
+                        </div>
+                    </div>
+
+                
+<h2>Differentiating Between Baseband and Broadband Signaling</h2>
+
+<p>Two types of signaling methods are used to transmit information over network media: baseband and broadband. Before we get any further into 802.3 standards we should clarify the difference between the two.</p>
+
+<div class="sidebar">
+   <p class="title">Exam Alert: Baseband and broadband</p>
+
+
+
+   <p>
+      <strong>Be prepared to identify the characteristics of baseband and broadband for the Network+ exam.</strong>
+   </p>
+
+</div>
+
+
+<h3>Baseband</h3>
+
+<p>Baseband transmissions typically use digital signaling over a single wire; the transmissions themselves take the form of either electrical pulses or light. The digital signal used in baseband transmission occupies the entire bandwidth of the network media to transmit a single data signal. Baseband communication is bidirectional, allowing computers to both send and receive data using a single cable. However, the sending and receiving cannot occur on the same wire at the same time.</p>
+
+<div class="sidebar">
+   <p class="title">Note: Ethernet and baseband</p>
+
+
+
+
+   <p>Ethernet networks use baseband transmissions; notice the word "base"&#8212;for example, 10BaseT or 10BaseFL.</p>
+
+</div>
+
+<p>Using baseband transmissions, it is possible to transmit multiple signals on a single cable by using a process known as <em>multiplexing</em>. Baseband uses Time-Division Multiplexing (TDM), which divides a single channel into time slots. The key thing about TDM is that it doesn't change how baseband transmission works, only the way data is placed on the cable.</p>
+
+
+
+<h3>Broadband</h3>
+
+<p>Whereas baseband uses digital signaling, broadband uses analog signals in the form of optical or electromagnetic waves over multiple transmission frequencies. For signals to be both sent and received, the transmission media must be split into two channels. Alternatively, two cables can be used: one to send and one to receive transmissions.</p>
+
+<p>Multiple channels are created in a broadband system by using a multiplexing technique known as <em>Frequency-Division Multiplexing (FDM)</em>. FDM allows broadband media to accommodate traffic going in different directions on a single media at the same time.</p>
+
+
+            </div>
+            <div class="articleTools clearfix box">
+                    <div class="pagination">
+            <a class="paginationPrevious" href="/articles/article.aspx?p=1358404&amp;seqNum=2">&lt;<span class="pagination-nodisplay"> Back</span></a>
+        <span class="paginationLocation"><span class="pagination-bold">Page 3</span><span class="pagination-nodisplay"> of 6</span></span>
+            <a class="paginationNext" href="/articles/article.aspx?p=1358404&amp;seqNum=4"><span class="pagination-nodisplay">Next </span>&gt;</a>
+    </div>
+
+                <div class="articleInteraction">
+                    <ul>
+                        <li>
+
+<script type="text/javascript">
+    addthis_pub = 'informit';
+    addthis_logo = 'http://www.pearsonitcertification.com/display/pearsonitcertification/images/header/certification.png';
+    addthis_logo_background = 'FFFFFF';
+    addthis_logo_color = 'FFFFFF';
+    addthis_brand = 'Pearson IT Cert';
+    addthis_options = 'email, delicious, digg, facebook, google, newsvine, reddit, slashdot, stumbleupon, technorati, twitter, more';
+</script>
+<a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><span class="ss-icon">&#x002B;</span> <span class="linkText">Share This</span></a>
+<script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js"></script>
+                        </li>
+                        <li class="last">
+                            <a href="#addToWishList" class="jsLoadFrame dialogOpener"><span class="ss-icon">&#x1F516;</span> <span class="linkText">Save To Your Account</span></a>               
+                        </li>
+                    </ul>
+                     <div id="addToWishList" class="dialogBox" title="Save To My Account">
+                         <iframe id="wishListSrc" src="/my_account/addTo.aspx?p=26da212b-dca4-4d31-99f6-302fe2635e87&e=f687583a-b675-47ae-97ac-39fd943c826b&t=a&redirectUrl=http://www.pearsonitcertification.com/articles/article.aspx?p=1358404&amp;seqNum=3&initialLoad=1"></iframe>
+                    </div> 
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div id="columnTwo" class="six columns omega rFull">
+<div id="promotions" class="tabwidget prop">
+	<h3>Related Resources</h3>
+	<ul class="tabs clearfix">
+		<li class="selected"><a href="#" onclick="tabWidget(1,'promotions'); return false;">Store</a></li>
+		<li><a href="#" onclick="tabWidget(2,'promotions'); loadWidget('promotions', 1, '/Related/Articles/1358404?stateIntId=87614'); return false;">Articles</a></li>
+		<li><a href="#" onclick="tabWidget(3,'promotions'); loadWidget('promotions', 2, '/Related/Blogs/1161559?stateIntId=87614'); return false;">Blogs</a></li>
+	</ul>
+	<div class="container on">
+
+    <div class="buckets-image-51 cf">
+        <div class="productCover">
+            <a href="/store/31-days-before-your-comptia-network-plus-certification-9780134392431?w_ptgrevartcl=31+Days+Before+Your+CompTIA+Network%2b+Certification+Exam%3a+A+Day-By-Day+Review+Guide+for+the+N10-006+Certification+Exam_2420488">
+                <img src="/ShowCover.aspx?isbn=0134392434&type=e" alt="31 Days Before Your CompTIA Network+ Certification Exam: A Day-By-Day Review Guide for the N10-006 Certification Exam" class="product" />
+            </a>
+        </div>
+
+        <ul class="buckets-list left">
+            <li class="buckets-list-title">
+                <a href="/store/31-days-before-your-comptia-network-plus-certification-9780134392431" class="title">
+                    31 Days Before Your CompTIA Network+ Certification Exam: A Day-By-Day Review Guide for the N10-006 Certification Exam
+                </a>
+            </li>
+            <li class="buckets-image-51-author">By <a href="/authors/bio/de991b08-4224-4a81-90fb-ccf0c28a0c08">Allan Johnson</a></li>
+            <li class="buckets-image-51-price">eBook (Watermarked) $22.39</li>
+        </ul>
+    </div><!--buckets-image-51 -->
+    <div class="buckets-image-51 cf">
+        <div class="productCover">
+            <a href="/store/31-days-before-your-comptia-network-plus-certification-9780789756473?w_ptgrevartcl=31+Days+Before+Your+CompTIA+Network%2b+Certification+Exam%3a+A+Day-By-Day+Review+Guide+for+the+N10-006+Certification+Exam_2420550">
+                <img src="/ShowCover.aspx?isbn=0789756471&type=e" alt="31 Days Before Your CompTIA Network+ Certification Exam: A Day-By-Day Review Guide for the N10-006 Certification Exam" class="product" />
+            </a>
+        </div>
+
+        <ul class="buckets-list left">
+            <li class="buckets-list-title">
+                <a href="/store/31-days-before-your-comptia-network-plus-certification-9780789756473" class="title">
+                    31 Days Before Your CompTIA Network+ Certification Exam: A Day-By-Day Review Guide for the N10-006 Certification Exam
+                </a>
+            </li>
+            <li class="buckets-image-51-author">By <a href="/authors/bio/de991b08-4224-4a81-90fb-ccf0c28a0c08">Allan Johnson</a></li>
+            <li class="buckets-image-51-price">Book $27.99</li>
+        </ul>
+    </div><!--buckets-image-51 -->
+    <div class="buckets-image-51 cf">
+        <div class="productCover">
+            <a href="/store/31-days-before-your-comptia-network-plus-certification-9780134426358?w_ptgrevartcl=31+Days+Before+Your+CompTIA+Network%2b+Certification+Exam+(Digital+Study+Guide)%3a+A+Day-By-Day+Review+Guide+for+the+N10-006+Certification+Exam+(eBook%2c+videos%2c+interactive+exercises%2c+quizzes)_2429205">
+                <img src="/ShowCover.aspx?isbn=0134426355&type=e" alt="31 Days Before Your CompTIA Network+ Certification Exam (Digital Study Guide): A Day-By-Day Review Guide for the N10-006 Certification Exam (eBook, videos, interactive exercises, quizzes)" class="product" />
+            </a>
+        </div>
+
+        <ul class="buckets-list left">
+            <li class="buckets-list-title">
+                <a href="/store/31-days-before-your-comptia-network-plus-certification-9780134426358" class="title">
+                    31 Days Before Your CompTIA Network+ Certification Exam (Digital Study Guide): A Day-By-Day Review Guide for the N10-006 Certification Exam (eBook, videos, interactive exercises, quizzes)
+                </a>
+            </li>
+            <li class="buckets-image-51-author">By <a href="/authors/bio/de991b08-4224-4a81-90fb-ccf0c28a0c08">Allan Johnson</a></li>
+            <li class="buckets-image-51-price">Web Edition $27.99</li>
+        </ul>
+    </div><!--buckets-image-51 -->
+    <p class="buckets-see-all">
+        <a href="/store/index.aspx?st=87614">See All Related Store Items</a>
+    </p>
+
+	</div>
+	<div class="container"></div>
+	<div class="container"></div>
+	<div class="container"></div>
+</div>
+        
+        
+    </div>
+
+    <script type="text/javascript" src="/display/common/javascript/waypoints.min.js"></script>
+    <script type="text/javascript" src="/display/common/javascript/jquery.fitvids.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function() {    
+            $('#articleText').fitVids();
+            if (document.documentElement.clientWidth > 960) {
+                $('#rContent').waypoint(function() {
+                    $('.relatedBook.slide').slideToggle();
+                    $('.relatedBookLink').slideToggle();
+                }, { offset: -300 }); 
+            } else {
+                console.log('narrow');
+                $('#rContent').waypoint(function() {
+                    $('.relatedBook.slide').slideToggle();
+                    $('.relatedBookLink').slideToggle();
+                }, { offset: -10 }); 
+
+                $('#articleContent').waypoint(function() {
+                    $('.relatedBook.slide').slideToggle();
+                    $('.relatedBookLink').slideToggle();
+                }, { offset: 'bottom-in-view' }); 
+            }
+                          
+            $('.relatedBookLink').on('click touchstart', function() {
+                $('.relatedBookLink').toggleClass('active');
+                $('.relatedBook.slide').toggleClass('active');
+                return false;              
+            });
+            $('.mobileClose').on('click touchstart', function() {
+                $('.relatedBookLink').toggleClass('active');
+                $('.relatedBook.slide').toggleClass('active');
+                return false;              
+            }); 
+            if (!$('.sidebar').children().is('.title, .theholder')) {
+                $('.sidebar').css('padding', '2em 1em 1em 1em');
+            }              
+        });
+    </script>
+</div><div id="header"><div class="cranium"><div id="hLogo"><a href="/" accesskey="0" title="Home" class="logo"><!--[if lte IE 8]><img src="/display/PearsonITCertification/images/header/certification.png" alt="Pearson Certification" /><![endif]--></a></div><a href="#menu" class="menu-link ss-icon"></a><div id="headerLinks" class="clearfix">
+                   
+    <div id="cartLink" class="headerLink c">
+        <span class="bighead ss-icon">&#xE500;</span>
+        <a href="https://memberservices.informit.com/cart/buy.aspx?partner=68">
+            <span class="bighead">View </span>Your Cart
+        </a>
+    </div>
+
+    <div class="hi">
+            <a href="https://memberservices.informit.com/my_account/register.aspx?partner=68">Join</a><span>|</span><a href="https://memberservices.informit.com/my_account/login.aspx?partner=68">Sign In</a>
+    </div>
+
+              <form name="headersearchform" id="headersearchform" class="s" method="GET" action="/search/index.aspx" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><label for="headersearchform">Search</label><input onfocus="checkClear(this,'Search');" type="text" name="query" id="query" value="Search" /><input type="submit" id="searchbutton" class="ss-icon" value="🔎" /></form></div></div></div><div id="siteNav"><div class="cranium clearfix"><ul id="nav"><li class="mobile search"><form name="headersearchform" id="headersearchform" class="s" method="GET" action="/search/index.aspx" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><label for="headersearchform">Search</label><input onfocus="checkClear(this,'Search');" type="text" name="query" id="query" value="Search" /><input type="submit" id="searchbutton" class="ss-icon" value="🔎" /></form></li>
+                
+    <li class="mobile">
+        <a href="https://memberservices.informit.com/cart/buy.aspx?partner=68">
+            <span class="ss-icon cart">&#xE500; </span> View Your Cart
+        </a>
+    </li>
+
+    <li class="mobile">
+        <a href="https://memberservices.informit.com/my_account/login.aspx?partner=68">
+            <span class="ss-icon">&#x1F464;</span> Sign In
+        </a>
+    </li>
+    <li class="mobile">
+        <a href="https://memberservices.informit.com/my_account/register.aspx?partner=68">Join</a>
+    </li>
+
+              <li class="browseByCert"><a href="/store/">
+                    Shop by Cert <span class="ss-icon arrow">▾</span></a><ul id="exam_sub"><li><a href="/store/index.aspx?st=86550">Cisco</a></li><li><a href="/store/index.aspx?st=86558">CompTIA</a></li><li><a href="/store/index.aspx?st=99183">LPI</a></li><li><a href="/store/index.aspx?st=86563">Microsoft</a></li><li><a href="/store/index.aspx?st=86635">Other IT Certifications</a></li><li><a href="/store/index.aspx?st=86644">Professional Certifications</a></li><li><a href="/store/index.aspx?st=99184">Red Hat</a></li><li><a href="/store/index.aspx?st=87579">VMware</a></li></ul></li><li><a href="/store/">
+                    Formats <span class="ss-icon arrow">▾</span></a><ul><li><a href="/store/browse/books">Books</a></li><li><a href="/store/browse/ebooks">eBooks</a></li><li><a href="/promotions/explore-all-bundle-offers-cisco-comptia-microsoft-red-141092">Exam Bundles</a></li><li><a href="/promotions/schedule-your-certification-exam-with-pearson-vue-141007">Exam Vouchers</a></li><li><a href="/store/browse/practice-tests">Practice Tests</a></li><li><a href="/store/browse/software">Software</a></li><li><a href="/store/browse/video">Video</a></li><li><a href="/store/browse/web-editions">Web Editions</a></li></ul></li><li><a href="/topics/index.aspx?st=86205">Learning Options</a></li><li><a href="/promotions/">Deals &amp; Promotions</a></li><li><a href="/promotions/it-certification-video-training-study-for-your-cisco-140506">Video Training</a></li><li class="explore"><a href="/explore/">
+                Explore <span class="ss-icon arrow">▾</span></a><ul class="explore"><li><a href="/about/">About</a></li><li><a href="https://www.pearsonhighered.com/disciplines/professional---career/information-technology/training---certification.html">Academic</a></li><li><a href="/affiliates/">Affiliate Program</a></li><li><a href="/authors/">Authors</a></li><li><a href="/articles/">Chapters &amp; Articles</a></li><li><a href="/about/contact_us/">Contact Us</a></li><li><a href="/promotions/">Deals &amp; Promotions</a></li><li><a href="/promotions/exam-profiles-overviews-of-cisco-comptia-microsoft-137954">Exam Profiles</a></li><li><a href="/promotions/resource-centers-141290">Resource Centers</a></li><li><a href="https://www.safaribooksonline.com/?utm_source=pearsonitcertification&amp;utm_medium=referral&amp;utm_campaign=publisher&amp;utm_content=global+top+nav">Safari</a></li><li><a href="/newsletters/">Special Offers &amp; Newsletter</a></li><li><a href="/about/help.aspx">Support</a></li></ul></li><li><a href="/promotions/join-our-certification-community-137783">
+                Community <span class="ss-icon arrow">▾</span></a><ul class="community"><li><a href="/press/">Press and Media Relations</a></li><li><a href="/promotions/become-a-part-of-the-community-voices-reviewer-program-139898">Product Review Team</a></li><li><a href="/user_groups/">User Groups</a></li></ul></li></ul></div></div><div id="footer"><div class="clearfix"><ul class="links"><li><a href="/about/">About</a></li><li><a href="/affiliates/">Affiliates</a></li><li><a href="/about/contact_us">Contact Us</a></li><li><a href="/about/legal.aspx">Legal Notice</a></li><li><a href="/newsletters/">Newsletters</a></li><li><a href="/about/privacy.aspx">Privacy Policy</a></li><li><a href="/press/">Press</a></li><li><a href="/promotions/">Promotions</a></li><li><a href="/site_map/">Site Map</a></li><li><a href="/about/help.aspx">Support</a></li><li><a href="/user_groups/">User Groups</a></li><li><a href="/about/write_for_us.aspx">Write For Us</a></li></ul><div itemscope="itemscope" itemtype="http://schema.org/Corporation"><p class="address">
+              ©  2017 Pearson Education, <span itemprop="name">Pearson IT Certification</span>. All rights reserved.
+            </p><div itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress"><p class="address"><span itemprop="streetAddress">800 East 96th Street</span>, <span itemprop="addressLocality">Indianapolis</span>, <span itemprop="addressRegion">Indiana </span><span itemprop="postalCode">46240</span></p></div></div></div></div><div id="strap"><div class="cranium"><div id="pearsonTopLogoLink"></div><div id="pearsonAlwaysLearningImage"></div></div></div><!--Google analytics--><script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+        { (i[r].q=i[r].q||[]).push(arguments)}
+        ,i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-433761-18', 'auto', {'allowLinker': true});
+        ga('require', 'linker');
+        
+        ga('linker:autoLink', ['www.pearsonitcertification.com', 'memberservices.informit.com']);
+        ga('send', 'pageview');
+      </script><script type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+            setTimeout(function(){var a=document.createElement("script");
+            var b=document.getElementsByTagName("script")[0];
+            a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0018/4148.js?"+Math.floor(new Date().getTime()/3600000);
+            a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+        </script></div><script type="text/javascript" xmlns:msxsl="urn:schemas-microsoft-com:xslt">_satellite.pageBottom();</script></body></html>

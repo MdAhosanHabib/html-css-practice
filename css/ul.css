@@ -1,0 +1,15 @@
+ ul .test{
+    
+    color: red;
+    font-size: bold;
+    font-style: italic;
+    background-color: aqua;
+}
+
+ ul .green{
+    
+    color: blueviolet;
+    font-size: bold;
+    font-style: italic;
+    background-color: brown;
+}

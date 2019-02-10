@@ -1,0 +1,19 @@
+table{
+    border: 0px;
+}
+
+tr th {
+    
+    background-color: red;
+    color: black;
+}
+tr td {
+    
+    background-color: aqua;
+    color: darkred;
+}
+caption{
+    
+    background-color: yellow;
+    color: black;
+}

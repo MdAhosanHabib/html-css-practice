@@ -1,0 +1,38 @@
+.head{
+     color: red;
+    background-color: aqua;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 4px;
+    margin-bottom: 2px;
+    border: 2px solid black;
+    float: left;
+    width: 60px;
+}
+.news{
+    color: brown;
+    background-color: yellow;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 2px;
+    float: left;
+    width: 1150px;
+    border: 2px solid black;
+}
+.navigation{
+    
+    float: clear;
+}
+.navigation ul li{
+    list-style: none;
+    color:black;
+    background-color: red;
+    padding: 5px;
+    margin-top: 2px;
+    width: 100px;
+    display: block;
+}
+span{
+    
+    display: none;
+}
